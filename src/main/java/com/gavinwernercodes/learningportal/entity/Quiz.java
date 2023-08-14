@@ -2,6 +2,8 @@ package com.gavinwernercodes.learningportal.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "quizzes")
 public class Quiz {
@@ -14,4 +16,7 @@ public class Quiz {
     @ManyToOne
     @JoinColumn(name = "lesson_id")
     private Lesson lesson;
+
+    @OneToMany(mappedBy = "quiz")
+    private List<Question> questions;
 }
