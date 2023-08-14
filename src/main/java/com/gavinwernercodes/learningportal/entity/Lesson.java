@@ -19,4 +19,7 @@ public class Lesson {
 
     @OneToMany(mappedBy = "lesson")
     private List<Resource> resources;
+
+    @OneToMany(mappedBy = "lesson")
+    private List<Quiz> quizzes;
 }
