@@ -14,4 +14,9 @@ public class Enrollment {
     @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
+
+
+    @ManyToOne
+    @JoinColumn(name = "student_id")
+    private Student student;
 }
