@@ -8,5 +8,5 @@ public class Authentication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long authentication_id;
 }

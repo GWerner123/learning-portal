@@ -10,7 +10,7 @@ public class Lesson {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long lesson_id;
 
 
     @ManyToOne
