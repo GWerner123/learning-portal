@@ -19,4 +19,8 @@ public class Enrollment {
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "progress_id")
+    private Progress progress;
 }
