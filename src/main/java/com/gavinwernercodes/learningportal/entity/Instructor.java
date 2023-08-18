@@ -23,4 +23,32 @@ public class Instructor {
 
     @OneToMany(mappedBy = "instructor")
     private List<Course> courses;
+
+
+    // getter and setter for instructor_id
+    public Long getInstructor_id() {
+        return instructor_id;
+    }
+
+    public void setInstructor_id(Long instructor_id) {
+        this.instructor_id = instructor_id;
+    }
+
+    // getter and setter for firstName
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    // getter and setter for lastName
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 }
