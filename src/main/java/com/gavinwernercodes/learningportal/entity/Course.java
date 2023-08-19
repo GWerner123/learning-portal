@@ -23,4 +23,14 @@ public class Course {
 
     @OneToMany(mappedBy = "course")
     private List<Lesson> lessons;
+
+
+    // public getters and setters
+    public Long getCourse_id() {
+        return course_id;
+    }
+
+    public void setCourse_id(Long course_id) {
+        this.course_id = course_id;
+    }
 }
