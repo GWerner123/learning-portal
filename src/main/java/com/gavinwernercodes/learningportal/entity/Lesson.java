@@ -22,4 +22,15 @@ public class Lesson {
 
     @OneToMany(mappedBy = "lesson")
     private List<Quiz> quizzes;
+
+
+    // public getters and setters
+
+    public Long getLesson_id() {
+        return lesson_id;
+    }
+
+    public void setLesson_id(Long lesson_id) {
+        this.lesson_id = lesson_id;
+    }
 }
