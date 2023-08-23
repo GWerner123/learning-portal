@@ -17,15 +17,19 @@ public class Course {
     private String course_title;
 
 
-    @ManyToOne
-    @JoinColumn(name = "instructor_id")
-    private Instructor instructor;
+
+    // relationships
 
     @OneToMany(mappedBy = "course")
     private List<Enrollment> enrollments;
 
     @OneToMany(mappedBy = "course")
     private List<Lesson> lessons;
+
+    @ManyToOne
+    @JoinColumn(name = "instructor_id")
+    private Instructor instructor;
+
 
 
     // public getter and setter for course_id

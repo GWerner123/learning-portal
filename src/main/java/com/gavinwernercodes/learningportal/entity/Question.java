@@ -2,6 +2,8 @@ package com.gavinwernercodes.learningportal.entity;
 
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
 @Table(name = "questions")
 public class Question {
@@ -10,6 +12,12 @@ public class Question {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long question_id;
 
+
+
+    // relationships
+
+    @OneToMany(mappedBy = "question")
+    private List<Answer> answers;
 
     @ManyToOne
     @JoinColumn(name = "quiz_id")
