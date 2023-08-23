@@ -11,10 +11,10 @@ public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "course_id")
-    private Long course_id;
+    private Long courseId;
 
     @Column(name = "course_title")
-    private String course_title;
+    private String courseTitle;
 
 
 
@@ -33,21 +33,21 @@ public class Course {
 
 
     // public getter and setter for course_id
-    public Long getCourse_id() {
-        return course_id;
+    public Long getCourseId() {
+        return courseId;
     }
 
-    public void setCourse_id(Long course_id) {
-        this.course_id = course_id;
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
     }
 
     // getter and setter for course_title
 
-    public String getCourse_title() {
-        return course_title;
+    public String getCourseTitle() {
+        return courseTitle;
     }
 
-    public void setCourse_title(String course_title) {
-        this.course_title = course_title;
+    public void setCourseTitle(String courseTitle) {
+        this.courseTitle = courseTitle;
     }
 }

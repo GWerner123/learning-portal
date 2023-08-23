@@ -8,8 +8,10 @@ public class Progress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long progress_id;
+    private Long progressId;
 
+
+    // relationships
 
     @OneToOne
     @JoinColumn(name = "enrollment_id")

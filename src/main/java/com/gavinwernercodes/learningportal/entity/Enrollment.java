@@ -8,19 +8,21 @@ public class Enrollment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long enrollment_id;
+    private Long enrollmentId;
 
+
+    // relationships
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "progress_id")
+    private Progress progress;
 
     @ManyToOne
     @JoinColumn(name = "course_id")
     private Course course;
 
-
     @ManyToOne
     @JoinColumn(name = "student_id")
     private Student student;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "progress_id")
-    private Progress progress;
 }

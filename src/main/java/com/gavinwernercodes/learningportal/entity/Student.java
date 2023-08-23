@@ -11,7 +11,7 @@ public class Student {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long student_id;
+    private Long studentId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -26,20 +26,24 @@ public class Student {
     private String password;
 
 
+
+    // relationships
+
     @OneToMany(mappedBy = "student")
     private List<Enrollment> enrollments;
 
 
-    // getter and setter for student_id
-    public Long getStudent_id() {
-        return student_id;
+
+
+    // getter and setters
+    public Long getStudentId() {
+        return studentId;
     }
 
-    public void setStudent_id(Long student_id) {
-        this.student_id = student_id;
+    public void setStudentId(Long studentId) {
+        this.studentId = studentId;
     }
 
-    // getter and setter for firstName
     public String getFirstName() {
         return firstName;
     }
@@ -48,7 +52,6 @@ public class Student {
         this.firstName = firstName;
     }
 
-    // getter and setter for lastName
     public String getLastName() {
         return lastName;
     }
@@ -57,8 +60,6 @@ public class Student {
         this.lastName = lastName;
     }
 
-    // getter and setter for username
-
     public String getUsername() {
         return username;
     }
@@ -66,8 +67,6 @@ public class Student {
     public void setUsername(String username) {
         this.username = username;
     }
-
-    // getter and setter for password
 
     public String getPassword() {
         return password;

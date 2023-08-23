@@ -10,12 +10,10 @@ public class Lesson {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long lesson_id;
+    private Long lessonId;
 
 
-    @ManyToOne
-    @JoinColumn(name = "course_id")
-    private Course course;
+    // relationships
 
     @OneToMany(mappedBy = "lesson")
     private List<Resource> resources;
@@ -23,14 +21,19 @@ public class Lesson {
     @OneToMany(mappedBy = "lesson")
     private List<Quiz> quizzes;
 
+    @ManyToOne
+    @JoinColumn(name = "course_id")
+    private Course course;
+
+
 
     // public getters and setters
 
-    public Long getLesson_id() {
-        return lesson_id;
+    public Long getLessonId() {
+        return lessonId;
     }
 
-    public void setLesson_id(Long lesson_id) {
-        this.lesson_id = lesson_id;
+    public void setLessonId(Long lessonId) {
+        this.lessonId = lessonId;
     }
 }

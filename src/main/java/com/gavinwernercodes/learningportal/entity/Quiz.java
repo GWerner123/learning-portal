@@ -10,13 +10,16 @@ public class Quiz {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long quiz_id;
+    private Long quizId;
 
+
+    // relationships
+
+    @OneToMany(mappedBy = "quiz")
+    private List<Question> questions;
 
     @ManyToOne
     @JoinColumn(name = "lesson_id")
     private Lesson lesson;
 
-    @OneToMany(mappedBy = "quiz")
-    private List<Question> questions;
 }

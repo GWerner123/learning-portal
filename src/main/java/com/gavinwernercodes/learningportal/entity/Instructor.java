@@ -11,7 +11,7 @@ public class Instructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "instructor_id")
-    private Long instructor_id;
+    private Long instructorId;
 
     @Column(name = "first_name")
     private String firstName;
@@ -27,20 +27,23 @@ public class Instructor {
 
 
 
+    // relationships
+
     @OneToMany(mappedBy = "instructor")
     private List<Course> courses;
 
 
-    // getter and setter for instructor_id
-    public Long getInstructor_id() {
-        return instructor_id;
+
+
+    // getter and setters
+    public Long getInstructorId() {
+        return instructorId;
     }
 
-    public void setInstructor_id(Long instructor_id) {
-        this.instructor_id = instructor_id;
+    public void setInstructorId(Long instructorId) {
+        this.instructorId = instructorId;
     }
 
-    // getter and setter for firstName
     public String getFirstName() {
         return firstName;
     }
@@ -49,7 +52,6 @@ public class Instructor {
         this.firstName = firstName;
     }
 
-    // getter and setter for lastName
     public String getLastName() {
         return lastName;
     }
@@ -58,8 +60,6 @@ public class Instructor {
         this.lastName = lastName;
     }
 
-    // getter and setter for username
-
     public String getUsername() {
         return username;
     }
@@ -67,8 +67,6 @@ public class Instructor {
     public void setUsername(String username) {
         this.username = username;
     }
-
-    // getter and setter for password
 
     public String getPassword() {
         return password;

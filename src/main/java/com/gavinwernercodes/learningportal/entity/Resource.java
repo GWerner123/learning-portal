@@ -8,8 +8,10 @@ public class Resource {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long resource_id;
+    private Long resourceId;
 
+
+    // relationships
 
     @ManyToOne
     @JoinColumn(name = "lesson_id")
