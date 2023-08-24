@@ -32,7 +32,7 @@ public class Course {
 
 
 
-    // public getter and setter for course_id
+    // public getters and setters
     public Long getCourseId() {
         return courseId;
     }
@@ -40,8 +40,6 @@ public class Course {
     public void setCourseId(Long courseId) {
         this.courseId = courseId;
     }
-
-    // getter and setter for course_title
 
     public String getCourseTitle() {
         return courseTitle;
