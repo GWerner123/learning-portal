@@ -12,6 +12,9 @@ public class Lesson {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long lessonId;
 
+    @Column(name = "lesson_title")
+    private String lessonTitle;
+
 
     // relationships
 
@@ -35,5 +38,13 @@ public class Lesson {
 
     public void setLessonId(Long lessonId) {
         this.lessonId = lessonId;
+    }
+
+    public String getLessonTitle() {
+        return lessonTitle;
+    }
+
+    public void setLessonTitle(String lessonTitle) {
+        this.lessonTitle = lessonTitle;
     }
 }
