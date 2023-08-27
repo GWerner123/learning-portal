@@ -4,6 +4,7 @@ import com.gavinwernercodes.learningportal.entity.Instructor;
 import com.gavinwernercodes.learningportal.entity.Student;
 import com.gavinwernercodes.learningportal.repository.InstructorRepository;
 import com.gavinwernercodes.learningportal.repository.StudentRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,10 +18,12 @@ public class RegistrationService {
         this.studentRepository = studentRepository;
     }
 
+    @Transactional
     public void createInstructor(Instructor instructor) {
         instructorRepository.save(instructor);
     }
 
+    @Transactional
     public void createStudent(Student student) {
         studentRepository.save(student);
     }
