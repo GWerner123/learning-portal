@@ -8,6 +8,8 @@ import java.util.List;
 @Table(name = "instructors")
 public class Instructor {
 
+    // fields
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "instructor_id")
@@ -36,6 +38,7 @@ public class Instructor {
 
 
     // getter and setters
+
     public Long getInstructorId() {
         return instructorId;
     }
